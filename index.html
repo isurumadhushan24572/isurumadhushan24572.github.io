@@ -1,89 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login To NTBM </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Data Science Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="login_form_container">
-    <form method="post" action="login.php">
-      <div class="login_form">
-        <h2>Login</h2>
-        <div class="input_group">
-          <i class="fa fa-user"></i>
-          <input
-            type="text"
-            name="uname"
-            placeholder="Student ID"
-            class="input_text"
-            autocomplete="off"
-            required
-          />
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Write a brief introduction about yourself and your interest in data science.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title</h3>
+            <p>Description of the project.</p>
+            <p><a href="#">View Project</a></p>
         </div>
-
-        
-        <div class="input_group">
-          <i class="fa fa-lock"></i>
-          <input
-            type="password"
-            name="password"
-            placeholder="Password(min. 6 characters)"
-            class="input_text"
-            autocomplete="off"
-            required
-            minlength="6"
-          />
-        </div>
-
-        
-
-        <div class="button_group" id="login_button">
-          <button type="submit" onclick="return validateForm()"><h5>Submit</h5></button>
-        </div>
-        
-        <div class="fotter">
-          <h3>Account?</h3>
-          <a href="register.html"><h3>Register</h3></a>
-        </div>
-      </div>
-    </form>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="login.js"></script>
-
-  <script>
-    function validateForm() {
-      var studentID = document.getElementsByName("uname")[0].value;
-     
-      var password = document.getElementsByName("password")[0].value;
-     
-
-      if (studentID === "") {
-        alert("Student ID cannot be empty.");
-        return false;
-      }
-
-      if (!/^[0-9]+$/.test(studentID)) {
-        alert("Student ID should contain only numbers.");
-        return false;
-      }
-
-      
-
-      if (password.length < 6) {
-        alert("Password should be at least 6 characters long.");
-        return false;
-      }
-
-      
-
-      return true;
-    }
-  </script>
+        <!-- Add more projects here -->
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: your_email@example.com</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
 </body>
 </html>
